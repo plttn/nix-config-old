@@ -17,10 +17,21 @@
     # hardware.url = "github:nixos/nixos-hardware";
     atuin-upstream.url = "github:atuinsh/atuin";
 
+    # base16.url = "github:SenchoPens/base16.nix";
+    # base16-schemes = {
+    #   url = "github:tinted-theming/base16-schemes";
+    #   flake = false;
+    # };
+
+    # base16-shell = {
+    #   url = "github:tinted-theming/base16-shell";
+    #   flake = false;
+    # };
+
 
     # Shameless plug: looking for a way to nixify your themes and make
     # everything match nicely? Try nix-colors!
-    # nix-colors.url = "github:misterio77/nix-colors";
+    nix-colors.url = "github:misterio77/nix-colors";
   };
 
   outputs =
