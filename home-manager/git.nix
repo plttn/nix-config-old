@@ -61,7 +61,11 @@
       push = {
         autoSetupRemote = "true";
       };
+      commit = {
+        gpgSign = true;
+      };
       gpg = {
+        format = "ssh";
         program = "${pkgs.gnupg}/bin/gpg";
         ssh =
           {
