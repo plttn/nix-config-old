@@ -6,6 +6,12 @@
 , pkgs
 , ...
 }: {
+
+  home.file.sshAllowedSigners = {
+    enable = true;
+    source = ../conf.d/allowed_signers;
+    target = ".ssh/allowed_signers";
+  };
   programs.git = {
     enable = true;
     userName = "Jack Platten";
@@ -55,9 +61,13 @@
       push = {
         autoSetupRemote = "true";
       };
-      # gpg = {
-      #   program = "${pkgs.gnupg}/bin/gpg";
-      # };
+      gpg = {
+        program = "${pkgs.gnupg}/bin/gpg";
+        ssh =
+          {
+            allowedSignersFile = "~/.ssh/allowed_signers"; #don't love this but c'est la vie
+          };
+      };
     };
   };
 }

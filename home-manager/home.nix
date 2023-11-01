@@ -97,6 +97,7 @@
     configFile."wezterm/wezterm.lua".source = ../conf.d/wezterm.lua;
   };
 
+
   programs.zoxide.enable = true;
 
 
