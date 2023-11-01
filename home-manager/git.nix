@@ -55,6 +55,9 @@
       la = "!git config -l | grep alias | cut -c 7-";
     };
     extraConfig = {
+      user = {
+        signingKey = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHGminsJAXUJkc7TH7qHU6RNdZuMcWIwdx+zZCDpDiUG";
+      };
       init = {
         defaultBranch = "main";
       };
